@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Visualizer</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizer Futurista</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <h1>Audio Visualizer</h1>
+    <div class="container">
+        <h1 class="titulo">AUDIO VISUALIZER</h1>
 
-    <div class="upload-area">
         <input type="file" id="audioFile" accept="audio/*">
-        <button id="playBtn">▶ Reproduzir</button>
-    </div>
+        <audio id="audio" controls></audio>
 
-    <canvas id="visualizer"></canvas>
+        <canvas id="visualizer"></canvas>
+    </div>
 
     <script src="script.js"></script>
 </body>
