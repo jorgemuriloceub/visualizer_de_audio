@@ -1,34 +1,43 @@
-body {
+* {
     margin: 0;
-    background: #0d0d0d;
-    color: white;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #050505, #000);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0ff;
+}
+
+.container {
     text-align: center;
+    width: 100%;
 }
 
-h1 {
-    margin-top: 25px;
+.titulo {
     font-size: 2rem;
+    color: #0ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #0ff;
 }
 
-.upload-area {
-    margin: 20px;
+#audioFile {
+    margin-bottom: 10px;
 }
 
-#playBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background: purple;
-    color: white;
-    border: none;
-    border-radius: 5px;
+#visualizer {
+    width: 100%;
+    height: 80vh;
+    display: block;
 }
 
 canvas {
-    display: block;
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-    background: #111;
+    filter: drop-shadow(0 0 12px #0ff);
 }
+
