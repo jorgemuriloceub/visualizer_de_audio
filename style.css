@@ -2,42 +2,78 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Certifique-se de que a fonte Orbitron está carregada */
     font-family: "Orbitron", sans-serif;
 }
 
 body {
-    background: radial-gradient(circle at center, #050505, #000);
+    /* Fundo escuro sutil */
+    background: #0a0a0a;
     height: 100vh;
     overflow: hidden;
     display: flex;
+    flex-direction: column; /* Alterado para layout de coluna para header/container */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinhado ao topo */
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.github-link {
     color: #0ff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid #0ff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.github-link:hover {
+    background-color: #0ff;
+    color: #000;
+    box-shadow: 0 0 10px #0ff;
 }
 
 .container {
     text-align: center;
     width: 100%;
+    /* Centraliza o conteúdo após o header */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulo {
-    font-size: 2rem;
-    color: #0ff;
-    margin-bottom: 15px;
-    text-shadow: 0 0 15px #0ff;
+    font-size: 2.5rem; /* Aumentei um pouco */
+    color: #fff; /* Título branco, contrastando com o fundo */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #0ff; /* Sombra de brilho sutil */
 }
 
 #audioFile {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #0ff;
 }
 
 #visualizer {
     width: 100%;
-    height: 80vh;
+    height: 70vh; /* Ajustei a altura */
     display: block;
 }
 
+/* Reduzi a intensidade do filtro de brilho para um tema mais minimalista */
 canvas {
-    filter: drop-shadow(0 0 12px #0ff);
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
 }
-
